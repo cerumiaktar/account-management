@@ -13,11 +13,71 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="https://unpkg.com/cally"></script>
     <title>Dashboard</title>
 </head>
 
 <body>
+    <header class="bg-base-100 shadow-sm">
+        <!-- This is Navbar -->
+        <div class="navbar container mx-auto">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="-1"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a>Dashboard</a></li>
+                        <li><a>Accounts</a></li>
+                        <li><a>Analytics</a></li>
+                        <li><a>Investments</a></li>
+                        <li><a>Imports</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost text-3xl font-bold">Logo</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a>Dashboard</a></li>
+                    <li><a>Accounts</a></li>
+                    <li><a>Analytics</a></li>
+                    <li><a>Investments</a></li>
+                    <li><a>Imports</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end space-x-3">
+                <div class="dropdown dropdown-start">
+                    <div tabindex="0" role="button" class="btn m-1 bg-[#06A337] text-white rounded-full"><i class="fa-regular fa-calendar"></i>Monthly</div>
+                    <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                        <calendar-date class="cally bg-base-100 border border-base-300 shadow-lg rounded-box">
+                            <svg aria-label="Previous" class="fill-current size-4" slot="previous"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M15.75 19.5 8.25 12l7.5-7.5"></path>
+                            </svg>
+                            <svg aria-label="Next" class="fill-current size-4" slot="next"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+                            </svg>
+                            <calendar-month></calendar-month>
+                        </calendar-date>
+                    </ul>
+                </div>
+                <a class="btn bg-black text-white rounded-full"><i class="fa-solid fa-circle-plus"></i>Add</a>
+                <a class="btn bg-black text-white rounded-full"><i class="fa-solid fa-user"></i>Account</a>
+            </div>
+        </div>
+    </header>
+    <main>
 
+    </main>
+    <footer>
+
+    </footer>
 </body>
 
 </html>
