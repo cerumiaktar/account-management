@@ -14,6 +14,8 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="module" src="https://unpkg.com/cally"></script>
+    <!-- Chart CDN -->
+
     <title>Dashboard</title>
 </head>
 
@@ -111,6 +113,115 @@
                 </div>
             </div>
         </section>
+        <!-- This is Todays Amount -->
+        <section class="container mx-auto mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-[#0AC277] p-10 rounded-xl text-white">
+                    <p class="text-lg font-medium">Todays Total Income</p>
+                    <h2 class="text-3xl font-bold">120000 TK</h2>
+                </div>
+                <div class="bg-[#F68975] p-10 rounded-xl text-white">
+                    <p class="text-lg font-medium">Todays Total Income</p>
+                    <h2 class="text-3xl font-bold">120000 TK</h2>
+                </div>
+                <div class="bg-[#8D97FF] p-10 rounded-xl text-white">
+                    <p class="text-lg font-medium">Todays Total Income</p>
+                    <h2 class="text-3xl font-bold">120000 TK</h2>
+                </div>
+                <div class="bg-[#EFB769] p-10 rounded-xl text-white">
+                    <p class="text-lg font-medium">Todays Total Income</p>
+                    <h2 class="text-3xl font-bold">120000 TK</h2>
+                </div>
+            </div>
+        </section>
+        <!-- This is Line Chart -->
+        <section class="container mx-auto flex gap-6">
+            <div class="w-6/12">
+                <!-- ###################Monthly Profit & Loss start################-->
+                <div class="col-xl-5 ">
+                    <div class="col-6">
+                        <div class="card shadow-lg border-0">
+                            <div class="card-body">
+                                <h4 class="header-title text-3xl font-bold mb-3">Cash Flow</h4>
+                                <canvas id="profitLossChart" height="300"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Chart.js -->
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const ctx = document.getElementById('profitLossChart').getContext('2d');
+
+                        const profitLossChart = new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+                                datasets: [
+                                    {
+                                        label: 'Profit',
+                                        data: [50000, 9000, 15000, 17000, 20000, 18000, 21000, 23000, 19000, 22000],
+                                        backgroundColor: 'rgba(40, 167, 69, 0.7)',
+                                        borderColor: '#28a745',
+                                        borderWidth: 2,
+                                        borderRadius: 8
+                                    },
+                                    {
+                                        label: 'Loss',
+                                        data: [5000, 3000, 4000, 2000, 1000, 2500, 2000, 3000, 3500, 4000],
+                                        backgroundColor: 'rgba(220, 53, 69, 0.7)',
+                                        borderColor: '#dc3545',
+                                        borderWidth: 2,
+                                        borderRadius: 8
+                                    }
+                                ]
+                            },
+                            options: {
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        ticks: { color: '#6c757d' },
+                                        grid: { color: 'rgba(0,0,0,0.05)' }
+                                    },
+                                    x: {
+                                        ticks: { color: '#6c757d' },
+                                        grid: { display: false }
+                                    }
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: { color: '#343a40' }
+                                    },
+                                    tooltip: {
+                                        backgroundColor: '#343a40',
+                                        titleColor: '#fff',
+                                        bodyColor: '#fff'
+                                    }
+                                }
+                            }
+                        });
+                    });
+                </script>
+                <!-- ###################Monthly Profit & Loss end################-->
+            </div>
+            <!-- This is Pie Chart -->
+            <div class="w-6/12">
+                <div class="">
+                    <div class="col-6">
+                        <div class="card shadow-lg border-0">
+                            <div class="card-body">
+                                <h4 class="header-title text-3xl font-bold mb-3">All Expenses</h4>
+                                <canvas id="profitLossChart" height="300"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </main>
     <footer>
 
