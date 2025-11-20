@@ -15,7 +15,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="module" src="https://unpkg.com/cally"></script>
     <!-- Chart CDN -->
-
     <title>Dashboard</title>
 </head>
 
@@ -134,8 +133,8 @@
                 </div>
             </div>
         </section>
-        <!-- This is Line Chart -->
-        <section class="container mx-auto flex gap-6">
+        <!-- This is Chart -->
+        <section class="container mx-auto flex gap-6 mb-12">
             <div class="w-6/12">
                 <!-- ###################Monthly Profit & Loss start################-->
                 <div class="col-xl-5 ">
@@ -143,7 +142,7 @@
                         <div class="card shadow-lg border-0">
                             <div class="card-body">
                                 <h4 class="header-title text-3xl font-bold mb-3">Cash Flow</h4>
-                                <canvas id="profitLossChart" height="300"></canvas>
+                                <canvas id="profitLossChart" height="400"></canvas>
                             </div>
                         </div>
                     </div>
@@ -206,22 +205,58 @@
                 </script>
                 <!-- ###################Monthly Profit & Loss end################-->
             </div>
-            <!-- This is Pie Chart -->
-            <div class="w-6/12">
-                <div class="">
-                    <div class="col-6">
-                        <div class="card shadow-lg border-0">
-                            <div class="card-body">
-                                <h4 class="header-title text-3xl font-bold mb-3">All Expenses</h4>
-                                <canvas id="profitLossChart" height="300"></canvas>
-                            </div>
-                        </div>
-                    </div>
+            <!-- This is Donut Chart -->
+        </section>
+        <!-- This is income and Expenses section -->
+        <section class="container mx-auto mb-12">
+            <!-- This is Income Section -->
+            <div class="bg-white shadow-2xl border rounded-xl border-[#666666] md:w-6/12 px-6 py-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h1 class="text-3xl font-bold">Income</h1>
+                    <a class="btn bg-black text-white rounded-full"><i class="fa-solid fa-circle-plus"></i>Add</a>
                 </div>
+                <div class="overflow-x-auto rounded border border-[#E8E8E8] bg-base-100">
+                    <table class="table">
+                        <!-- head -->
+                        <thead>
+                            <tr>
+                                <th>Sources</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th>Note</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- row 1 -->
+                            <tr>
+                                <th>Office (Sarkar IT)</th>
+                                <td>৳1,25000.00</td>
+                                <td>10 Jun 2025</td>
+                                <td>Website</td>
+                            </tr>
+                            <!-- row 2 -->
+                            <tr>
+                                <th>2</th>
+                                <td>Hart Hagerty</td>
+                                <td>Desktop Support Technician</td>
+                                <td>Purple</td>
+                            </tr>
+                            <!-- row 3 -->
+                            <tr>
+                                <th>3</th>
+                                <td>Brice Swyre</td>
+                                <td>Tax Accountant</td>
+                                <td>Red</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- This is Expences Section -->
+            <div>
 
             </div>
         </section>
-
     </main>
     <footer>
 
